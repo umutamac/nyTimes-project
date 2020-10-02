@@ -63,7 +63,12 @@
     <script type="text/javascript">
 
         var apiK = "ixNkGGhn0pHP8XSkvLam0NNRgRimeipV";
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + query + "&api-key=" + apiK;
+        //query url for the first ten results                                        search term                   year or month of publication               first ten results            API key                           
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + query + "&facet_fields=" + /* pub_year or pub_month */ + "&facet=true" + "&page=0" + "&api-key=" + apiK;
+
+        $.ajax({
+            url: queryURL,
+        })
 
     </script>
 </body>
