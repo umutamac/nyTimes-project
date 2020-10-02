@@ -1,1 +1,15 @@
-.header
+.header {
+    background-color: rgb(11, 33, 228);
+    color: white;
+    font-weight: 800;
+}
+.border{
+    padding: 25px;
+}
+h3 {
+    font-weight: 700;
+}
+footer{
+    text-align: center;
+    margin-bottom: 15px;
+}
