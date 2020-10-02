@@ -60,19 +60,6 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-        var apiK = "ixNkGGhn0pHP8XSkvLam0NNRgRimeipV";
-        //query url for the first ten results                                        search term                   year or month of publication               first ten results            API key                           
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + query + "&facet_fields=" + /* pub_year or pub_month */ + "&facet=true" + "&page=0" + "&api-key=" + apiK;
-
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-        })
-
-    </script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
