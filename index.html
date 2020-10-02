@@ -9,21 +9,31 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
-        <h1>New York Times Search</h1>
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">New York Times Search</h1>
+        </div>
     </header>
 
     <div class="container">
         <form class="search-parameters">
-
+            <h3>Search Parameters</h3>
             <div class="form-group">
                 <label for="searchTerm">Search Term:</label>
                 <input type="text" class="form-control" id="searchTerm">
             </div>
+
             <div class="form-group">
-                <label for="numOfRecords">Number of Records to Retrieve:</label>
-                <input type="text" class="form-control" id="numOfRecords">
+            <label for="numOfRecords">Number of Records to Retrieve:</label>
+            <select class="custom-select" id="numOfRecords" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+            </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
             </div>
+               
             <div class="form-group">
                 <label for="startYear">Start Year: (Optional)</label>
                 <input type="text" class="form-control" id="startYear">
@@ -32,14 +42,14 @@
                 <label for="endYear">End Year: (Optional)</label>
                 <input type="text" class="form-control" id="endYear">
             </div>
-
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button type="submit" class="btn btn-primary" id="clear">Clear</button>
         </form>
 
-        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-        <button type="submit" class="btn btn-primary" id="clear">Clear</button>
+        
 
         <div class="top-articles" id="results">
-            <h2>Top Articles</h2>
+            <h3>Top Articles</h3>
 
         </div>
 
